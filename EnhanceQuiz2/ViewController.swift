@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scoreFinal.isHidden = true
         
         displayQuestion(num: currentQuestion)
         
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
 
     }
     
+ 
 
     
     @IBOutlet weak var score: UILabel!
@@ -60,88 +62,244 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerChoiceButton2Outlet: UIButton!
     @IBOutlet weak var answerChoiceButton3Outlet: UIButton!
     @IBOutlet weak var answerChoiceButton4Outlet: UIButton!
+    @IBOutlet weak var corrector: UILabel!
+    @IBOutlet weak var scoreFinal: UILabel!
+
     
-    
-    
+
     @IBAction func answerChoiceButton1Action(_ sender: UIButton) {
 
         
         var currentLabelForButton1 = sender.currentTitle
         
+        
         if currentLabelForButton1 == questions[shuffleQuestions[currentQuestion]].choices[0] {
+          
+            view.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
             currentScore += 1
             
             score.text = "\(currentScore)"
             
             currentQuestion += 1
             
-            displayQuestion(num: currentQuestion)
+            if currentQuestion == 10 {
+            
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+            
+            } else { displayQuestion(num: currentQuestion) }
+        
+            
+            
         } else {
+            view.backgroundColor = UIColor(red: 223/255.0, green: 86/255.0, blue: 94/255.0, alpha: 1.0)
+           
+            
+            corrector.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
+            corrector.text = questions[shuffleQuestions[currentQuestion]].choices[0]
+            
             currentQuestion += 1
             
-            displayQuestion(num: currentQuestion)
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
+            
+        
         }
         
     }
+        
+
     
     @IBAction func answerChoiceButton2Action(_ sender: UIButton) {
         
+
+        
         var currentLabelForButton2 = sender.currentTitle
         
+
+        
         if currentLabelForButton2 == questions[shuffleQuestions[currentQuestion]].choices[0] {
+         
+            view.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
             currentScore += 1
             
             score.text = "\(currentScore)"
             
             currentQuestion += 1
             
-            displayQuestion(num: currentQuestion)
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         } else {
-            currentQuestion += 1
+            view.backgroundColor = UIColor(red: 223/255.0, green: 86/255.0, blue: 94/255.0, alpha: 1.0)
             
-            displayQuestion(num: currentQuestion)
+            
+            corrector.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
+            corrector.text = questions[shuffleQuestions[currentQuestion]].choices[0]
+            
+            currentQuestion += 1
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         }
     }
+
     
     @IBAction func answerChoiceButton3Action(_ sender: UIButton) {
     
+
         var currentLabelForButton3 = sender.currentTitle
+
         
         if currentLabelForButton3 == questions[shuffleQuestions[currentQuestion]].choices[0] {
+          
+            view.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
             currentScore += 1
             
             score.text = "\(currentScore)"
             
             currentQuestion += 1
             
-            displayQuestion(num: currentQuestion)
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         } else {
-            currentQuestion += 1
+            view.backgroundColor = UIColor(red: 223/255.0, green: 86/255.0, blue: 94/255.0, alpha: 1.0)
             
-            displayQuestion(num: currentQuestion)
+            
+            corrector.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
+            corrector.text = questions[shuffleQuestions[currentQuestion]].choices[0]
+            
+            currentQuestion += 1
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         }
         
     }
+
     
     @IBAction func answerChoiceButton4Action(_ sender: UIButton) {
     
+        
         var currentLabelForButton4 = sender.currentTitle
+
         
         if currentLabelForButton4 == questions[shuffleQuestions[currentQuestion]].choices[0] {
+      
+            view.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
+            
             currentScore += 1
             
             score.text = "\(currentScore)"
             
             currentQuestion += 1
             
-            displayQuestion(num: currentQuestion)
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         } else {
-            currentQuestion += 1
+            view.backgroundColor = UIColor(red: 223/255.0, green: 86/255.0, blue: 94/255.0, alpha: 1.0)
             
-            displayQuestion(num: currentQuestion)
+            
+            corrector.backgroundColor = UIColor(red: 61/255.0, green: 212/255.0, blue: 106/255.0, alpha: 1.0)
+            corrector.text = questions[shuffleQuestions[currentQuestion]].choices[0]
+            
+            currentQuestion += 1
+            if currentQuestion == 10 {
+                
+                answerChoiceButton1Outlet.isHidden = true
+                answerChoiceButton2Outlet.isHidden = true
+                answerChoiceButton3Outlet.isHidden = true
+                answerChoiceButton4Outlet.isHidden = true
+                corrector.isHidden = true
+                
+                questionLabel.text = "Your final score is"
+                
+                scoreFinal.isHidden = false
+                scoreFinal.text = "\(currentScore) / 10"
+                
+            } else { displayQuestion(num: currentQuestion) }
         }
         
     }
+
+
     
     
     

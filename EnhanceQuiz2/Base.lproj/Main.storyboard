@@ -44,6 +44,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.84997074795731109" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.98243197001893645" green="1" blue="0.95658525244049641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="answerChoiceButton1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="613-xa-jR2"/>
@@ -88,14 +89,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-H9-cfc">
+                                <rect key="frame" x="16" y="609" width="343" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="jgh-Pv-RQB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHN-V3-lcO">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="asU-iL-fNd" firstAttribute="top" secondItem="t9B-1R-W9d" secondAttribute="bottom" constant="74" id="2a2-Jn-KUk"/>
                             <constraint firstItem="drh-RT-AzK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Mh-yX-X7V"/>
+                            <constraint firstItem="t9B-1R-W9d" firstAttribute="top" secondItem="HHN-V3-lcO" secondAttribute="bottom" constant="28" id="5kM-HW-dhF"/>
                             <constraint firstItem="3S8-Rx-NUH" firstAttribute="baseline" secondItem="drh-RT-AzK" secondAttribute="baseline" id="8ly-9C-Z7i"/>
                             <constraint firstItem="Fz8-Vo-6hC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AX2-HZ-cdL"/>
                             <constraint firstItem="57b-L0-fIw" firstAttribute="top" secondItem="drh-RT-AzK" secondAttribute="bottom" constant="14" id="Hdr-ER-Y7D"/>
+                            <constraint firstItem="HHN-V3-lcO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J3I-Dq-TQT"/>
+                            <constraint firstItem="9Ih-H9-cfc" firstAttribute="trailing" secondItem="asU-iL-fNd" secondAttribute="trailing" id="LCe-fP-kz8"/>
                             <constraint firstItem="asU-iL-fNd" firstAttribute="leading" secondItem="t9B-1R-W9d" secondAttribute="leading" id="MW9-hq-byB"/>
                             <constraint firstItem="3S8-Rx-NUH" firstAttribute="firstBaseline" secondItem="drh-RT-AzK" secondAttribute="firstBaseline" id="Nai-D3-K0V"/>
                             <constraint firstItem="57b-L0-fIw" firstAttribute="trailing" secondItem="Fz8-Vo-6hC" secondAttribute="trailing" id="Oe8-Bi-8TA"/>
@@ -103,12 +122,16 @@
                             <constraint firstItem="koj-O9-RBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rhz-GM-fJf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="drh-RT-AzK" secondAttribute="trailing" constant="201" id="UJJ-Ku-x4k"/>
                             <constraint firstItem="3S8-Rx-NUH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YgK-0n-gKO"/>
+                            <constraint firstAttribute="bottom" secondItem="9Ih-H9-cfc" secondAttribute="bottom" constant="20" symbolic="YES" id="Z6e-sU-qei"/>
                             <constraint firstItem="Fz8-Vo-6hC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a9J-YX-zok"/>
                             <constraint firstItem="3S8-Rx-NUH" firstAttribute="leading" secondItem="Fz8-Vo-6hC" secondAttribute="leading" id="aMb-X7-gLx"/>
+                            <constraint firstItem="9Ih-H9-cfc" firstAttribute="leading" secondItem="asU-iL-fNd" secondAttribute="leading" id="brr-Sg-hx1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HHN-V3-lcO" secondAttribute="trailing" id="doz-K9-wgE"/>
                             <constraint firstItem="3S8-Rx-NUH" firstAttribute="leading" secondItem="57b-L0-fIw" secondAttribute="leading" id="eFm-Jq-B7r"/>
                             <constraint firstItem="asU-iL-fNd" firstAttribute="trailing" secondItem="t9B-1R-W9d" secondAttribute="trailing" id="gZ8-0n-fzG"/>
                             <constraint firstItem="t9B-1R-W9d" firstAttribute="width" secondItem="3S8-Rx-NUH" secondAttribute="width" id="hst-9n-uYX"/>
                             <constraint firstItem="t9B-1R-W9d" firstAttribute="top" secondItem="koj-O9-RBa" secondAttribute="bottom" constant="65" id="htC-OJ-Vmh"/>
+                            <constraint firstItem="HHN-V3-lcO" firstAttribute="top" secondItem="koj-O9-RBa" secondAttribute="bottom" constant="16" id="hyD-1d-Usj"/>
                             <constraint firstItem="koj-O9-RBa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nt0-fH-d1f"/>
                             <constraint firstItem="Fz8-Vo-6hC" firstAttribute="top" secondItem="57b-L0-fIw" secondAttribute="bottom" constant="39" id="pOS-6e-yRT"/>
                             <constraint firstItem="57b-L0-fIw" firstAttribute="top" secondItem="3S8-Rx-NUH" secondAttribute="bottom" constant="14" id="uXA-U8-tgp"/>
@@ -123,8 +146,10 @@
                         <outlet property="answerChoiceButton2Outlet" destination="koj-O9-RBa" id="f1h-RA-2aR"/>
                         <outlet property="answerChoiceButton3Outlet" destination="t9B-1R-W9d" id="56w-qb-fzg"/>
                         <outlet property="answerChoiceButton4Outlet" destination="asU-iL-fNd" id="Mth-3L-OjK"/>
+                        <outlet property="corrector" destination="9Ih-H9-cfc" id="2L8-1L-VS0"/>
                         <outlet property="questionLabel" destination="57b-L0-fIw" id="OzG-UE-Ctq"/>
                         <outlet property="score" destination="drh-RT-AzK" id="Xn5-ZS-q8p"/>
+                        <outlet property="scoreFinal" destination="HHN-V3-lcO" id="g4P-5S-HOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
